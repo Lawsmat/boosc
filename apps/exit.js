@@ -1,8 +1,7 @@
 let chalk = require("chalk")
 module.exports = {
     run: function(instance) {
-        console.log(chalk.magenta("Exiting..."))
-        require("../index").exit()
+        process.exit(0)
     },
     help: "exit | Exits boosc.js."
 }
