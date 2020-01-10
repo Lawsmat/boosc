@@ -1,5 +1,7 @@
 const apps = require("../apps")
 const chalk = require("chalk")
+let wrap = require("word-wrap")
+
 module.exports = {
     isHelp: true,
     run: function(instance,args) {
@@ -10,10 +12,10 @@ module.exports = {
             if(item != "help") {
                 if(everyOther) {
                     everyOther = false
-                    console.log(chalk.cyan(mod.help))
+                    wrap(console.log(chalk.cyan(mod.help)))
                 }else{
                     everyOther = true
-                    console.log(chalk.blue(mod.help))
+                    wrap(console.log(chalk.blue(mod.help)))
                 }
             }
         });

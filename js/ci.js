@@ -21,6 +21,9 @@ module.exports = {
         } catch (error) {
             console.log(chalk.red("Command not found."))
             this.prompt()
+            if(process.env.BOOSC_DEBUG == "true") {
+                console.error(error)
+            }
         }
         if(m) {
             m.run(this,cmdargs)

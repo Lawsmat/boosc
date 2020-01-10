@@ -2,5 +2,6 @@
 module.exports = {
     help: require("./help"),
     print: require("./print"),
-    exit: require("./exit")
+    exit: require("./exit"),
+    d: require("./d")
 }
