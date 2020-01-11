@@ -16,6 +16,10 @@ module.exports = {
         let cmdargs = cmd.split(" ")
         let cmdName = cmdargs.shift()
         let m;
+        let canrun = true
+        if(cmd = "") {
+            canrun = false;
+        }
         try {
             m = require('../apps/' + cmdName);
         } catch (error) {
@@ -25,7 +29,7 @@ module.exports = {
                 console.error(error)
             }
         }
-        if(m) {
+        if(m && canrun) {
             m.run(this,cmdargs)
         }
     },
