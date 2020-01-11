@@ -1,9 +1,17 @@
-print Boosc.js file v0.0.1
+d copyright = "(c) 2020 Lawsmat"
+
+print -v copyright
+
+print --------------
+
+print thing.boosc file v0.0.1
 
 wait 1000
 
-print this is the second boosc.js file
+print this is the second thing.boosc file
 
 wait 1000
 
 print the first one was awesome, yet not awesome enough!
+
+wait 4000
