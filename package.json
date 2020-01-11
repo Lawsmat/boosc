@@ -1,25 +1,25 @@
 {
-  "name": "boosc.js",
-  "version": "1.0.0",
+  "name": "boosc",
+  "version": "1.0.3",
   "description": "A little experiment",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Who needs tests???\" && exit 1"
   },
   "bin": {
     "boosc": "./index.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Lawsmat/boosc.js.git"
+    "url": "git+https://github.com/Lawsmat/boosc.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Lawsmat/boosc.js/issues"
+    "url": "https://github.com/Lawsmat/boosc/issues"
   },
-  "homepage": "https://github.com/Lawsmat/boosc.js#readme",
+  "homepage": "https://github.com/Lawsmat/boosc#readme",
   "dependencies": {
     "@octokit/rest": "^16.36.0",
     "chalk": "^3.0.0",
@@ -27,9 +27,7 @@
     "clui": "^0.3.6",
     "configstore": "^5.0.0",
     "dotenv": "^8.2.0",
-    "enquirer": "^2.3.2",
     "figlet": "^1.2.4",
-    "inquirer": "^7.0.3",
     "lodash": "^4.17.15",
     "minimist": "^1.2.0",
     "ora": "^4.0.3",
@@ -37,6 +35,7 @@
     "simple-git": "^1.129.0",
     "sleep": "^6.1.0",
     "touch": "^3.1.0",
-    "word-wrap": "^1.2.3"
+    "word-wrap": "^1.2.3",
+    "yargs": "^15.1.0"
   }
 }
