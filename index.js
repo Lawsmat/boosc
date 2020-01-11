@@ -10,9 +10,13 @@ const os = require("os")
 const fs = require("fs")
 const readline = require("readline")
 
+const yargs = require("yargs")
+
 let fileMode = false
 
-let cliArgs = process.argv.slice(2);
+// yargs.alias("f","file")
+
+let cliArgs = yargs.argv._
 
 if(cliArgs[0]) {
     // It must be a file! Executable reading time, grab your reading glasses!
@@ -42,9 +46,13 @@ if(process.env.BOOSC_STARTUP_SCREEN == "true" && fileMode == false) {
 }
 else {
     if(fileMode == false) {
-        require("./js/ci").prompt()
+        setTimeout(() => {
+            require("./js/ci").prompt()
+        },100)
     }
 }
+
+let instantExit = true
 
 if(fileMode == true) {
     if(fs.existsSync(cliArgs[0])) {
@@ -53,10 +61,15 @@ if(fileMode == true) {
             console: false
         });
         readInterface.on('line', function(line) {
+            if(line == "exit") {
+                instantExit = false
+            }
             require("./js/ci").run(line)
         });
         readInterface.on('close', function(line) {
-            process.exit(0)
+            if(instantExit == true) {
+                process.exit(0)
+            }
         });
     }else{
         console.log(chalk.red("File does not exist!"))

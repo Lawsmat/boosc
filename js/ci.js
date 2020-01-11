@@ -2,6 +2,7 @@ const chalk = require('chalk');
 const clear = require('clear');
 const figlet = require('figlet');
 const ora = require("ora")
+const fs = require("fs")
 
 const readline = require('readline');
 const os = require("os")
@@ -21,6 +22,13 @@ module.exports = {
             canrun = false
             this.prompt()
         }
+
+        // if(!fs.existsSync("./../apps/" + cmdName + ".js")) {
+        //     canrun = false
+        //     console.log(chalk.red("Command not found."))
+
+        //     this.prompt()
+        // }
         try {
             m = require('../apps/' + cmdName);
         } catch (error) {

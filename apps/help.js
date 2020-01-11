@@ -9,7 +9,7 @@ module.exports = {
         let everyOther = true
         Object.keys(apps).forEach(function (item) {
             let mod = apps[item]
-            if(item != "help") {
+            if(item != "help" && item != "run") {
                 if(everyOther) {
                     everyOther = false
                     wrap(console.log(chalk.cyan(mod.help)))
