@@ -1,0 +1,9 @@
+print Boosc.js file v0.0.1
+
+wait 1000
+
+print this is the second boosc.js file
+
+wait 1000
+
+print the first one was awesome, yet not awesome enough!

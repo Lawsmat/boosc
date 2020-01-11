@@ -17,8 +17,9 @@ module.exports = {
         let cmdName = cmdargs.shift()
         let m;
         let canrun = true
-        if(cmd = "") {
-            canrun = false;
+        if(cmd == "") {
+            canrun = false
+            this.prompt()
         }
         try {
             m = require('../apps/' + cmdName);
@@ -34,8 +35,10 @@ module.exports = {
         }
     },
     prompt: function() {
-        rl.question(chalk.bold(chalk.green(os.userInfo().username + "@" + os.hostname) + chalk.magenta(" $ ")), (cmd) => {
-            this.run(cmd)
-        });
+        if(require("../index").isFileMode == false) {
+            rl.question(chalk.bold(chalk.green(os.userInfo().username + "@" + os.hostname) + chalk.magenta(" $ ")), (cmd) => {
+                this.run(cmd)
+            });
+        }
     }
 }
