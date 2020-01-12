@@ -1,20 +1,13 @@
-d copyright = "(c) 2020 Lawsmat"
-
-print -v copyright
-
-print --------------
-
-print thing.boosc file v0.0.1
-
-wait 1000
-
-print this is the second thing.boosc file
-
-wait 1000
-
-print the first one was awesome, yet not awesome enough!
-
-wait 4000
-print -v copyright
-
-print Bye!
+if "boosc"=="boosc"
+print boosc == boosc
+end
+if "bldoawds"=="boosc"
+print we have an issue
+end
+if "boosc"=="boosc"
+print boosc == boosc
+print Joe mama is boosc
+end
+if "bldoawds"=="boosc"
+print we have an issue
+end

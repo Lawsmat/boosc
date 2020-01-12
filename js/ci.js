@@ -32,14 +32,16 @@ module.exports = {
         try {
             m = require('../apps/' + cmdName);
         } catch (error) {
-            console.log(chalk.red("Command not found."))
+            if(cmd != "end"){
+                console.log(chalk.red("Command not found."))
+            }
             this.prompt()
             if(process.env.BOOSC_DEBUG == "true") {
                 console.error(error)
             }
         }
         if(m && canrun) {
-            m.run(this,cmdargs)
+            return m.run(this,cmdargs)
         }
     },
     prompt: function() {

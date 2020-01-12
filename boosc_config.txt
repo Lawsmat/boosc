@@ -4,5 +4,9 @@
 
 # Show the boosc startup screen? [true/false]
 BOOSC_STARTUP_SCREEN=true
+
 # Debug mode? [true/false]
 DEBUG=false
+
+# Show the file extention warning? [true,false]
+EXT_WARNING=true
