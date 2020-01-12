@@ -28,7 +28,7 @@ if(process.env.BOOSC_STARTUP_SCREEN == "true" && fileMode == false) {
     clear();
     console.log(
     chalk.blueBright(
-        figlet.textSync('boosc.js', { horizontalLayout: 'full' })
+        figlet.textSync('boosc', { horizontalLayout: 'full' })
     )
     );
     console.log(chalk.blue("==> Welcome to boosc.js <=="))

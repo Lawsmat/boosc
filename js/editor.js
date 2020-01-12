@@ -1,6 +1,6 @@
 function edit() {
     var cp = require("child_process");
-    cp.exec(__dirname + "/../.env.txt"); // notice this without a callback..
+    cp.exec(__dirname + "/../boosc_config.txt");
     require("./ci").prompt()
 }
 
