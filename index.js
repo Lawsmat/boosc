@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-require("dotenv").config()
+require('dotenv').config({ path: __dirname + "/.env.txt" })
 
 const chalk = require('chalk');
 const clear = require('clear');

@@ -5,6 +5,7 @@ module.exports = {
     exit: require("./exit"),
     d: require("./d"),
     wait: require('./wait'),
+    options: require("./options"),
     run: function() {
         console.log("Internal error.")
     }
