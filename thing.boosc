@@ -15,3 +15,6 @@ wait 1000
 print the first one was awesome, yet not awesome enough!
 
 wait 4000
+print -v copyright
+
+print Bye!

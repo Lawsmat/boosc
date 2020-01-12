@@ -8,5 +8,6 @@ module.exports = {
     options: require("./options"),
     run: function() {
         console.log("Internal error.")
+        require("../js/ci").prompt()
     }
 }
