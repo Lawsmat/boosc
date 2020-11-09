@@ -5,12 +5,12 @@ module.exports = {
     run: function(instance,args) {
         if(args[0] == "-v") {
             if(database.getVariable(args[1])) {
-                wrap(console.log(database.getVariable(args[1])))
+                console.log(wrap(database.getVariable(args[1])))
             }else{
                 console.log(chalk.red("Error: No variable named '" + args[1] + "' was found."))
             }
         } else {
-            wrap(console.log(args.toString().replace(/,/g," ")))
+            console.log(wrap(args.join(" ")))
         }
         instance.prompt()
     },
